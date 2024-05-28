@@ -1,14 +1,15 @@
 package com.guilda.zup.tmdbguildapjazul.usecase
 
+import com.guilda.zup.tmdbguildapjazul.interfaces.UseCase
 import com.guilda.zup.tmdbguildapjazul.model.UiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.onStart
 
-class GetDataUseCase {
+class GetDataUseCase : UseCase<String> {
     //TODO: create repository
-    fun getData(): Flow<UiState<String>> {
+    override fun getData(): Flow<UiState<String>> {
         return flow {
             emit(UiState.Loading)
             emit(UiState.Success("UserName"))

@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class MainViewModel(private val getDataUseCase: GetDataUseCase) : ViewModel() {
+class MainViewModel(private val getDataUseCase: GetDataUseCase) : BaseViewModel<String>(getDataUseCase) {
 
     private val _uiStateLiveData = MutableStateFlow<UiState<String>>(UiState.Loading)
 
