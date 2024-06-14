@@ -27,13 +27,6 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        CoroutineScope(Dispatchers.IO).launch {
-            val result = repository.searchMovie("a vida secreta")
-            Log.d("repository", result.data.toString())
-            result.data?.results?.forEach {
-                Log.d("repository", it.title)
-            }
-        }
         setContent {
             TMDBGuildaPJAzulTheme {
                 // A surface container using the 'background' color from the theme
