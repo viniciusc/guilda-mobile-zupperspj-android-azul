@@ -1,6 +1,12 @@
+import config.Libs.retrofit
+import config.Libs.hilt
+import config.Modules.retrofitNetwork
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -66,4 +72,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    retrofit()
+    retrofitNetwork()
+    hilt()
 }
