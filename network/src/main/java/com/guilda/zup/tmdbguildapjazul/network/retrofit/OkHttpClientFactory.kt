@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit
 const val FIVE_MEGA_BYTES = 5 * 1024 * 1024
 
 object OkHttpClientFactory {
-    private val bearerToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MGM3MzYwZjZmOTRmOGVkN2E2NGExODBiM2YzOWUyZiIsInN1YiI6IjY2NmM3ZTM0YjQwNGZiMDcyMDVhMGQwZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.EGQm-hXUOrKO2W8pRd6MqHl7OBaDnvagITPwOievJXc"
+
     fun build(interceptor: Interceptor, connectionChecker: ConnectionChecker, context: Context): OkHttpClient {
         val cacheSize = FIVE_MEGA_BYTES.toLong()
         val myCache = Cache(context.cacheDir, cacheSize)
@@ -30,7 +30,7 @@ object OkHttpClientFactory {
             .readTimeout(1, TimeUnit.MINUTES)
             .connectTimeout(1, TimeUnit.MINUTES)
             .addInterceptor(interceptor)
-            .addInterceptor(AuthInterceptor(bearerToken))
+            .addInterceptor(AuthInterceptor())
 
         return clientBuilder.build()
     }

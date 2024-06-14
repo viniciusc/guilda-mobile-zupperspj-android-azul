@@ -10,9 +10,15 @@ plugins {
 
 android {
     namespace = "com.guilda.zup.tmdbguildapjazul.network"
-    compileSdk = 32
+    compileSdk = 34
+
+    buildFeatures {
+        buildConfig = true
+    }
 
     defaultConfig {
+        buildConfigField("String", "TMDB_BEARER_TOKEN", "\"${project.properties["TMDB_BEARER_TOKEN"]}\"")
+        buildConfigField("String", "TMDB_API_KEY", "\"${project.properties["TMDB_API_KEY"]}\"")
         minSdk = 21
         targetSdk = 32
 

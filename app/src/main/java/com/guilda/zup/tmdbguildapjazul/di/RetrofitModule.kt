@@ -1,6 +1,7 @@
 package com.guilda.zup.tmdbguildapjazul.di
 
 import android.content.Context
+import com.guilda.zup.tmdbguildapjazul.BuildConfig
 import com.guilda.zup.tmdbguildapjazul.data.repository.MoviesRepository
 import com.guilda.zup.tmdbguildapjazul.data.repository.MoviesRepositoryImpl
 import com.guilda.zup.tmdbguildapjazul.data.repository.api.ApiService
@@ -57,7 +58,7 @@ object RetrofitModule {
         okHttpClient: OkHttpClient,
         moshiConverterFactory: MoshiConverterFactory
     ): Retrofit {
-        return RetrofitClient.build("https://api.themoviedb.org/3/", okHttpClient, moshiConverterFactory)
+        return RetrofitClient.build(BuildConfig.TMDB_URL, okHttpClient, moshiConverterFactory)
     }
 
     @Provides

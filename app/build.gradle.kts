@@ -13,7 +13,12 @@ android {
     namespace = "com.guilda.zup.tmdbguildapjazul"
     compileSdk = 34
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     defaultConfig {
+        buildConfigField("String", "TMDB_URL", "\"${project.properties["TMDB_URL"]}\"")
         applicationId = "com.guilda.zup.tmdbguildapjazul"
         minSdk = 24
         targetSdk = 34
