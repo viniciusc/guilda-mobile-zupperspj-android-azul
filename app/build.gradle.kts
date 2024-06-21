@@ -1,13 +1,24 @@
+import config.Libs.retrofit
+import config.Libs.hilt
+import config.Modules.retrofitNetwork
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
     namespace = "com.guilda.zup.tmdbguildapjazul"
     compileSdk = 34
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     defaultConfig {
+        buildConfigField("String", "TMDB_URL", "\"${project.properties["TMDB_URL"]}\"")
         applicationId = "com.guilda.zup.tmdbguildapjazul"
         minSdk = 24
         targetSdk = 34
@@ -68,4 +79,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    retrofit()
+    retrofitNetwork()
+    hilt()
 }

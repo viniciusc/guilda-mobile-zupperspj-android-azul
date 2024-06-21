@@ -14,7 +14,9 @@ import androidx.compose.ui.Modifier
 import com.guilda.zup.tmdbguildapjazul.theme.ComposeByExampleTheme
 import com.guilda.zup.tmdbguildapjazul.ui.Home
 import com.guilda.zup.tmdbguildapjazul.model.UiState
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     private val viewModel: MainViewModel by viewModels {

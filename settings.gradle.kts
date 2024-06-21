@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "TMDBGuildaPJAzul"
 include(":app")
+include(":network")
+
  
