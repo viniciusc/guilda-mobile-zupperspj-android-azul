@@ -18,4 +18,8 @@ interface ApiService {
     suspend fun getGenres(
         @Query("language") language: String = "pt-BR",
     ): Response<GenresResponse>
+
+    @GET("movie/top_rated")
+    suspend fun getTopMovies(@Query("language") language: String = "pt-BR"
+    ) : Response<MovieSearchResponse>
 }
