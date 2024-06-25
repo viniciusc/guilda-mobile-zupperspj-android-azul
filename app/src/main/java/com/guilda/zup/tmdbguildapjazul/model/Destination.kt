@@ -1,7 +1,7 @@
 package com.guilda.zup.tmdbguildapjazul.model
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.ui.graphics.vector.ImageVector
 
@@ -22,7 +22,7 @@ sealed class Destination(
     }
 
     object Home: Destination("home")
-    object Movies: Destination("movies", Icons.Default.List)
-    object TvShows: Destination("tvshows", Icons.Default.List)
+    object Movies: Destination("movies", Icons.AutoMirrored.Filled.List)
+    object TvShows: Destination("tvshows", Icons.AutoMirrored.Filled.List)
     object Settings: Destination("settings", Icons.Default.Settings, isRootDestination = false)
 }

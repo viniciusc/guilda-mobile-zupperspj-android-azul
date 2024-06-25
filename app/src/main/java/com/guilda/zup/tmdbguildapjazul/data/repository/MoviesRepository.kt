@@ -8,4 +8,5 @@ interface MoviesRepository {
 
     suspend fun searchMovie(query: String): Resource<MovieSearchResponse>
     suspend fun getGenres(): Resource<GenresResponse>
+    suspend fun getTopMovies() : Resource<MovieSearchResponse>
 }

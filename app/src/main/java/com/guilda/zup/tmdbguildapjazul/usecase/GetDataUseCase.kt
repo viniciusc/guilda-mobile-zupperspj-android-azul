@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.onStart
 
 class GetDataUseCase : UseCase<String> {
     //TODO: create repository
-    override fun getData(): Flow<UiState<String>> {
+    override suspend fun getTopMovies(): Flow<UiState<String>> {
         return flow {
             emit(UiState.Loading)
             emit(UiState.Success("UserName"))

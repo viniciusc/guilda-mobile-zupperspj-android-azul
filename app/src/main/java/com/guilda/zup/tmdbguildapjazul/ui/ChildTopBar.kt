@@ -2,7 +2,7 @@ package com.guilda.zup.tmdbguildapjazul.ui
 
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
@@ -22,7 +22,7 @@ fun ChildDestinationTopBar(
                 onNavigateUp()
             }) {
                 Icon(
-                    imageVector = Icons.Default.ArrowBack,
+                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                     contentDescription = "Voltar"
                 )
             }
