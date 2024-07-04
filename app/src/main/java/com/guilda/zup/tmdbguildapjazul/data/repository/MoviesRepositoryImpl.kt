@@ -18,4 +18,10 @@ class MoviesRepositoryImpl(
     override suspend fun getGenres(): Resource<GenresResponse> {
         return RetrofitResponse(connectionChecker) { api.getGenres() }.result()
     }
+
+    override suspend fun getTopMovies() : Resource<MovieSearchResponse> {
+        return RetrofitResponse(connectionChecker) {
+            api.getTopMovies()
+        }.result()
+    }
 }
