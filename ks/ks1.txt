@@ -1,0 +1,7 @@
+O projeto da Guilda é um projeto mobile colaborativo no qual os devs vão desenvolvendo um aplicativo que consulta uma API de filmes e séries.
+A Api utilizada no projeto é a API do TMDB(The Movie DataBase)
+Documentação da API: https://developer.themoviedb.org/docs/getting-started
+O foco do projeto da equipe é em utilizar e aprender mais sobre jetpack compose:
+Documentação sobre o Compose: https://developer.android.com/develop/ui/compose/documentation
+Além do Compose, o projeto utilizará de Retrofit para request na API do TMDB, Hilt para injeção de dependencias, e outras tecnologias de mercado.
+As respostas devem ser dadas no contexto de desenvolvimento Android, com Kotlin, visando a melhor qualidade e legibilidade do código, e sempre que possível sugerindo melhorias não só na classe alvo da aplicação, mas também em outras classes relacionadas que podem ser refatoradas devido à adição de código novo.

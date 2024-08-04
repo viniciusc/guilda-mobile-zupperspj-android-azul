@@ -5,6 +5,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import com.guilda.zup.tmdbguildapjazul.R
 
 @Composable
 fun ChildDestinationTopBar(
@@ -23,7 +25,7 @@ fun ChildDestinationTopBar(
             }) {
                 Icon(
                     imageVector = Icons.Default.ArrowBack,
-                    contentDescription = "Voltar"
+                    contentDescription = stringResource(R.string.voltar)
                 )
             }
         }

@@ -98,13 +98,15 @@ fun Home(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding),
-            contentAlignment = Alignment.Center
+            contentAlignment = Alignment.TopCenter
         ) {
             when (uiState) {
                 is UiState.Loading -> {
                 }
                 is UiState.Success -> {
-                    uiState.data.data?.let { MovieRow(it) }
+                    if(currentDestination == Destination.Movies){
+                        uiState.data.data?.let { MovieRow(it, "Popular Movies") }
+                    }
                 }
                 is UiState.Error -> {
 

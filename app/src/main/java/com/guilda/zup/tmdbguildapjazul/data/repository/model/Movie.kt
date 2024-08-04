@@ -1,8 +1,10 @@
 package com.guilda.zup.tmdbguildapjazul.data.repository.model
 
-import com.google.gson.annotations.SerializedName
+import android.os.Parcelable
 import com.squareup.moshi.Json
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Movie(
     @field:Json(name = "adult") val adult: Boolean,
     @field:Json(name = "backdrop_path") val backdropPath: String?,
@@ -18,6 +20,6 @@ data class Movie(
     @field:Json(name = "video") val video: Boolean,
     @field:Json(name = "vote_average") val voteAverage: Double,
     @field:Json(name = "vote_count") val voteCount: Double
-)
+) : Parcelable
 
-fun Movie.getGenres(genresMap: GenresMap) = genreIds.mapNotNull { genresMap[it.toInt()] }
+fun Movie.getGenres(genresMap: GenresMap) = genreIds.mapNotNull { genresMap[it] }

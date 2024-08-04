@@ -24,6 +24,10 @@ class MovieViewModel @Inject constructor(private val moviesUseCase: MoviesUseCas
             moviesUseCase.getTopMovies().collect { uiState ->
                 _uiStateLiveData.value = uiState
             }
+
+            moviesUseCase.getGenres().collect {
+                android.util.Log.d("teste", "retorno genres")
+            }
         }
     }
 }

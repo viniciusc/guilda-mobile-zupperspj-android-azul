@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TMDBGuildaPJAzul</string>
+    <string name="original_language">Original Language: %1$s</string>
+    <string name="overview">Overview: %1$s</string>
+    <string name="rating">Rating: %1$s</string>
+    <string name="voltar">Voltar</string>
+    <string name="genres">Genres: %1$s</string>
 </resources>
